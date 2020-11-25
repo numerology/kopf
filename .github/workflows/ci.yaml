@@ -104,7 +104,7 @@ jobs:
       - run: pytest --color=yes --only-e2e
 
   full-scale-crd-v1:
-    if: ${{ github.event_name == 'schedule' }}
+    if: github.event_name == 'schedule'
     strategy:
       fail-fast: false
       matrix:
@@ -136,7 +136,7 @@ jobs:
       - run: pytest --color=yes --only-e2e
 
   full-scale-crd-v1beta1:
-    if: ${{ github.event_name == 'schedule' }}
+    if: github.event_name == 'schedule'
     strategy:
       fail-fast: false
       matrix:
